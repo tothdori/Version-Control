@@ -32,6 +32,7 @@
             this.lblLastName = new System.Windows.Forms.Label();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.fajl = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listUsers
@@ -69,11 +70,22 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.button1_Click);
             // 
+            // fajl
+            // 
+            this.fajl.Location = new System.Drawing.Point(411, 223);
+            this.fajl.Name = "fajl";
+            this.fajl.Size = new System.Drawing.Size(203, 23);
+            this.fajl.TabIndex = 4;
+            this.fajl.Text = "button1";
+            this.fajl.UseVisualStyleBackColor = true;
+            this.fajl.Click += new System.EventHandler(this.fajl_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.fajl);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.lblLastName);
@@ -91,6 +103,7 @@
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button fajl;
     }
 }
 
