@@ -21,6 +21,7 @@ namespace UserMaintenance
             lblLastName.Text = Resource1.FullName; // label1
             btnAdd.Text = Resource1.Add; // button1
             fajl.Text = Resource1.File;
+            btnDelete.Text = Resource1.Delete;
 
             // listbox1
             listUsers.DataSource = users;
@@ -37,9 +38,11 @@ namespace UserMaintenance
             users.Add(u);
         }
 
+        //fájlba írás
+
         private void fajl_Click(object sender, EventArgs e)
         {
-            SaveFileDialog sfd = new SaveFileDialog();
+            SaveFileDialog sfd = new SaveFileDialog();  //bin/Debug mappába mentsünk
             if (sfd.ShowDialog()!=DialogResult.OK)
             {
                 return;
@@ -49,12 +52,15 @@ namespace UserMaintenance
             {
                 foreach (var item in users)
                 {
-                    sw.Write(item.FirstName);
-                    sw.Write(item.LastName);
                     sw.Write(item.ID);
                     sw.Write(item.FullName);
                 }
             }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            users.RemoveAt(listUsers.SelectedIndex); //kitörli amire rákattintok
         }
     }
 }
